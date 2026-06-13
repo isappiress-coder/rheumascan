@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/pubmed/:path*",
+      "destination": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/:path*"
+    },
+    {
+      "source": "/europepmc/:path*",
+      "destination": "https://www.ebi.ac.uk/europepmc/webservices/rest/:path*"
+    },
+    {
+      "source": "/s2/:path*",
+      "destination": "https://api.semanticscholar.org/graph/v1/:path*"
+    }
+  ]
+}
