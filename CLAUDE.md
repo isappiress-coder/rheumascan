@@ -2,6 +2,30 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## GitHub Sync (Auto-Push)
+
+Este projeto está vinculado ao repositório GitHub `ISABELAPIRES/rheumascan`.
+
+**Comportamento automático:** ao final de cada sessão do Claude Code, o hook `Stop` executa `.claude/scripts/auto-push.ps1`, que faz `git add . && git commit && git push origin main` sempre que houver alterações pendentes.
+
+**Para criar o repositório pela primeira vez (rodar uma vez no terminal):**
+```powershell
+gh auth login          # autenticar com GitHub (abre o navegador)
+gh repo create rheumascan --public --source=. --remote=origin --push
+```
+
+**Para sincronizar manualmente:**
+```powershell
+cd "c:\Users\isapi\OneDrive\Área de Trabalho\PROJETOS CLAUDE\rheumascan"
+git add . && git commit -m "update" && git push origin main
+```
+
+**Para ver o status:**
+```powershell
+git status
+git log --oneline -5
+```
+
 ## Commands
 
 ```bash

@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -ExecutionPolicy Bypass -File \"c:\\Users\\isapi\\OneDrive\\Área de Trabalho\\PROJETOS CLAUDE\\rheumascan\\.claude\\scripts\\auto-push.ps1\""
+          }
+        ]
+      }
+    ]
+  }
+}
